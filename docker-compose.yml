@@ -1,0 +1,25 @@
+services:
+  webdav:
+    image: chonjay21/webdav:latest
+    container_name: webdav
+    restart: unless-stopped
+
+    environment:
+      APP_USER_NAME: ${WEBDAV_USERNAME}
+      APP_USER_PASSWD: ${WEBDAV_PASSWORD}
+      APP_UID: 1001
+      APP_GID: 1001
+      APP_UMASK: "022"
+      TZ: Europe/London
+      USE_SSL: "false"
+
+    volumes:
+      - /opt/data/webdav:/var/webdav/data
+
+    networks:
+      - npm_webdav_proxy
+
+networks:
+  npm_webdav_proxy:
+    external: true
+    name: npm_webdav_proxy

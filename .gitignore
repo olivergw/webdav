@@ -1,0 +1,25 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Docker/runtime data
+data/
+logs/
+*.log
+
+# Backups
+backups/
+*.tar
+*.tar.gz
+*.sql
+*.sql.gz
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
