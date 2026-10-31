@@ -17,13 +17,9 @@ services:
       - /opt/data/webdav:/var/webdav/data
 
     networks:
-      - npm_webdav_proxy
       - traefik_proxy
 
 networks:
   traefik_proxy:
     external: true
     name: traefik_proxy
-  npm_webdav_proxy:
-    external: true
-    name: npm_webdav_proxy
