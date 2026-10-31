@@ -30,7 +30,6 @@ services:
       - /opt/data/webdav:/var/webdav/data
 
     networks:
-      - traefik_proxy
       - backend
 
 networks:
